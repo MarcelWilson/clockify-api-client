@@ -56,7 +56,8 @@ class TimeEntry(AbstractClockify):
     def update_time_entry(
         self, workspace_id: str, entry_id: str, payload: dict
     ) -> JsonType:
-        """Updates time entry in Clockify with provided payload data.
+        """
+        Updates time entry in Clockify with provided payload data.
 
         :param workspace_id Id of workspace.
         :param entry_id     Id of time entry.
