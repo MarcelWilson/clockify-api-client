@@ -12,14 +12,6 @@ from clockify_api_client.utils import Singleton
 
 
 class ClockifyAPIClient(metaclass=Singleton):
-    workspaces: Workspace
-    projects: Project
-    tags: Tag
-    tasks: Task
-    time_entries: TimeEntry
-    users: User
-    reports: Report
-    clients: Client
 
     def __init__(self, api_key: str, api_url: str) -> None:
         """
