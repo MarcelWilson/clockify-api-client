@@ -15,7 +15,8 @@ class Client(AbstractClockify):
     def add_client(
         self, workspace_id: str, name: str | None = None, note: str | None = None
     ) -> JsonType:
-        """Adds new client.
+        """
+        Adds new client.
 
         :param workspace_id Id of workspace to look for clients.
         :param name         Name of the new client.
