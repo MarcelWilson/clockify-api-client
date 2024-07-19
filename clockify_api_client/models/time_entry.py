@@ -75,7 +75,8 @@ class TimeEntry(AbstractClockify):
     def add_time_entry(
         self, workspace_id: str, user_id: str, payload: dict
     ) -> JsonType:
-        """Adds time entry in Clockify with provided payload data.
+        """
+        Adds time entry in Clockify with provided payload data.
 
         Paid feature, workspace need to have active paid subscription.
         :param workspace_id Id of workspace.
