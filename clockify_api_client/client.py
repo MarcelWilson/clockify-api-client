@@ -22,7 +22,9 @@ class ClockifyAPIClient(metaclass=Singleton):
     clients: Client
 
     def __init__(self, api_key: str, api_url: str) -> None:
-        """Builds services from available factories.
+        """
+        Builds services from available factories.
+
         :param api_key Clockify API key.
         :param api_url Clockify API url.
         """

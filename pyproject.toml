@@ -51,7 +51,7 @@ select = [
     "B",  # flake8-bugbear
     "BLE",  # flake8-blind-except
     "C4",  # flake8-comprehensions
-#    "D",  # pydocstyle
+    "D",  # pydocstyle
     "DTZ", # flake8-datetimez
     "E",  # pycodestyle error
     "EM",  # flake8-errmsg
@@ -96,6 +96,19 @@ ignore = [
     #TEMP IGNORES
     "B024", # abstract base class
     "TRY002", # own exceptions
+
+    # docstring rules
+    
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D102", # Missing docstring in public method
+    "D103", # Missing docstring in public function
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D106", # Missing docstring in public nested class
+    "D107", # Missing docstring in `__init__`
+
+    "D205", # blank line between summary and description
 ]
 
 extend-safe-fixes = [
@@ -110,7 +123,7 @@ extend-safe-fixes = [
     "RSE102",
     "SIM105", "SIM108",
     "UP006", "UP007", "UP008", 
-    "W291",
+    "W291", "W293",
     "TRY201",
     "ISC001",
 ]

@@ -15,6 +15,7 @@ class Project(AbstractClockify):
     def get_projects(self, workspace_id: str, params: dict | None = None) -> JsonType:
         """
         Returns projects from given workspace with applied params if provided.
+
         :param workspace_id Id of workspace.
         :param params       Dictionary with request parameters.
         :return             List of projects.
@@ -41,6 +42,7 @@ class Project(AbstractClockify):
     ) -> JsonType:
         """
         Add new project into workspace.
+
         :param workspace_id Id of workspace.
         :param project_name Name of new project.
         :param client_id    Id of client.

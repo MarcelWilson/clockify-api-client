@@ -17,6 +17,7 @@ class Report(AbstractClockify):
     def get_summary_report(self, workspace_id: str, payload: dict) -> JsonType:
         """
         Calls Clockify API for summary report.
+
         Returns summary report object(Dictionary)
 
         :param workspace_id Id of workspace for report.
@@ -34,6 +35,7 @@ class Report(AbstractClockify):
     def get_detailed_report(self, workspace_id: str, payload: dict) -> JsonType:
         """
         Calls Clockify API for detailed report.
+
         Returns detailed report object(Dictionary)
 
         :param workspace_id Id of workspace for report.
@@ -51,6 +53,7 @@ class Report(AbstractClockify):
     def get_weekly_report(self, workspace_id: str, payload: dict) -> JsonType:
         """
         Calls Clockify API for weekly report.
+
         Returns weekly report object(Dictionary)
 
         :param workspace_id Id of workspace for report.
