@@ -34,7 +34,8 @@ class Client(AbstractClockify):
             raise
 
     def get_clients(self, workspace_id: str, params: dict | None = None) -> JsonType:
-        """Returns all clients.
+        """
+        Returns all clients.
 
         :param workspace_id Id of workspace to look for clients.
         :param params       URL params of request.
