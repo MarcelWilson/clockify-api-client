@@ -21,10 +21,11 @@ class Client(AbstractClockify):
         :param note         Description of client
         :return             Dictionary representation of new client.
         """
+        assert name
+        data = {"name": name, "note": note}
+        url = f"{self.base_url}/workspaces/{workspace_id}/clients/"
+
         try:
-            assert name
-            data = {"name": name, "note": note}
-            url = f"{self.base_url}/workspaces/{workspace_id}/clients/"
             return self.post(url, payload=data)
         except Exception:
             logging.exception("API error")
@@ -36,18 +37,13 @@ class Client(AbstractClockify):
         :param params       URL params of request.
         :return             List of clients(dict objects).
         """
+        if params:
+            url_params = urlencode(params, doseq=True)
+            url = f"{self.base_url}/workspaces/{workspace_id}/clients?{url_params}"
+        else:
+            url = f"{self.base_url}/workspaces/{workspace_id}/clients/"
+
         try:
-            if params:
-                url_params = urlencode(params, doseq=True)
-                url = (
-                    self.base_url
-                    + "/workspaces/"
-                    + workspace_id
-                    + "/clients?"
-                    + url_params
-                )
-            else:
-                url = f"{self.base_url}/workspaces/{workspace_id}/clients/"
             return self.get(url)
         except Exception:
             logging.exception("API error")

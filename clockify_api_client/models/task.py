@@ -51,7 +51,8 @@ class Task(AbstractClockify):
         :param request_data  Dictionary with request data.
         :return              Dictionary with task object representation.
         """
-        url = f"{self.base_url}/workspaces/{workspace_id}/projects/{project_id}/tasks/{task_id}"
+        path = f"/workspaces/{workspace_id}/projects/{project_id}/tasks/{task_id}"
+        url = f"{self.base_url}/{path}"
 
         try:
             return self.put(url, request_data)
@@ -88,7 +89,8 @@ class Task(AbstractClockify):
         :param task_id       Request URL query parameters.
         :return              List with dictionaries with task object representation.
         """
-        url = f"{self.base_url}/workspaces/{workspace_id}/projects/{project_id}/tasks/{task_id}"
+        path = f"/workspaces/{workspace_id}/projects/{project_id}/tasks/{task_id}"
+        url = f"{self.base_url}/{path}"
 
         try:
             return self.get(url)

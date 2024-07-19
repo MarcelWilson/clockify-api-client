@@ -19,7 +19,7 @@ class TimeEntry(AbstractClockify):
         :param workspace_id Id of workspace.
         :param user_id      Id of user.
         :param params       Request URL query params.
-        :return             List with dictionary representation of time entries from clockify.
+        :return  List with dictionary representation of time entries from clockify.
         """
         _url = f"{self.base_url}/workspaces/{workspace_id}/user/{user_id}"
 
